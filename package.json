@@ -1,0 +1,28 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "an api made with express.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app",
+    "prod": "SET NODE_ENV=prodcution & nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annuv231/Express-Api.git"
+  },
+  "author": "Amlendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annuv231/Express-Api/issues"
+  },
+  "homepage": "https://github.com/annuv231/Express-Api#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
