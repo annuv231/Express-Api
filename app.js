@@ -8,15 +8,18 @@ const truth = require("./route/truth");
 //conoecting mongoDB database
 connectDatabase();
 
+//setting up middleware
+
+app.use("/api/v1/truth", (req, res, next) => {
+  console.log("Request type:", req.method);
+  req.Method = req.method;
+  req.user = "Amlendra";
+  next();
+});
+
 //getting data
 app.use("/api/v1", truth);
 
-//setting up middleware
-
-const middlware = (req, res, next) => {
-  console.log("this is sending from middlware");
-};
-app.use(middlware);
 //liesting to the server
 app.listen(PORT, () =>
   console.log(
